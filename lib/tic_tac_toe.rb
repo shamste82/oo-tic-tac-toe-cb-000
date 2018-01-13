@@ -20,6 +20,8 @@ class TicTacToe
     puts " #{board[3]} | #{board[4]} | #{board[5]} "
     puts "-----------"
     puts " #{board[6]} | #{board[7]} | #{board[8]} "
+  end
 
-
+  def input_to_index()
+  end
 end
