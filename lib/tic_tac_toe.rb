@@ -124,7 +124,7 @@ def play
   if !winner
     puts "Cat's Game!"
   elsif winner
-    winner = winner
+    winner = winner()
     puts "Congratulations #{winner}!"
   end
 end
