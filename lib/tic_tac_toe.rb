@@ -117,5 +117,18 @@ class TicTacToe
   end
 end
 
+def play
+  until over?
+    turn
+  end
+  if !winner
+    puts "Cat's Game!"
+  elsif winner
+    winner = winner
+    puts "Congratulations #{winner}!"
+  end
+end
+
+
 
 end
