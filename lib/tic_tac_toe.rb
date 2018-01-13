@@ -38,7 +38,7 @@ class TicTacToe
     index.between?(0,8) && !position_taken?(index)
   end
 
-  def turn_count()
+  def turn_count
     @board.count{|xo| xo == "X" || xo == "O"}
   end
 
@@ -46,7 +46,7 @@ class TicTacToe
     return turn_count.even? ? "X" : "O"
   end
 
-  def turn()
+  def turn
     puts "Please enter 1-9:"
     input = gets.strip
     user_input = input_to_index(input)
@@ -58,7 +58,7 @@ class TicTacToe
     turn()
   end
 
-  def won?()
+  def won?
     WIN_COMBINATIONS.each do |combination|
         win_index_1 = combination[0]
         win_index_2 = combination[1]
@@ -78,7 +78,7 @@ class TicTacToe
     return false
   end
 
-  def full?()
+  def full?
     for i in(0..8)
       if !position_taken?(i)
         return false
@@ -87,11 +87,11 @@ class TicTacToe
     return true
   end
 
-  def draw?(board)
-    if !won?(board) && full?(board)
+  def draw?()
+    if !won?() && full?()
       return true
     end
     return false
   end
-  
+
 end
