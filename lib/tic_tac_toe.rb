@@ -77,4 +77,13 @@ class TicTacToe
     end
     return false
   end
+
+  def full?(board)
+    for i in(0..8)
+      if !position_taken?(i)
+        return false
+      end
+    end
+    return true
+  end
 end
